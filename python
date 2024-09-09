@@ -1,0 +1,82 @@
+print("hello world");
+
+a=2.5;
+b=4.5;
+sum=a+b;
+print("the sum of {0} and {1} is {2}".format(a,b,sum));
+
+a=2.5;
+b=4.5;
+sum=a+b;
+print("the sum of %f and %f is %f"%(a,b,sum));
+
+#read a number and print its square
+#input to read
+n=int(input('enter the number'))
+print (n**2)
+
+#read the three sides of triangle and print its area
+#s=a+b+c/2
+#area=sqrt(s-a)(s-b)(s-c)
+
+a=float(input('enter side 1'))
+b=float(input('enter side 2'))
+c=float(input('enter side 3'))
+s=(a+b+c)/2
+area=(s*(s-a)*(s-b)*(s-c))**0.5
+print(area)
+
+#a program to read an integer check for positvive negative or zero ,if zero print fact=1,if neagtive print an error msg otherwise compute and print the factorial of that number
+n=int(input('enter a integer'))
+if(n<0):
+    print('error : please enter a valid number')
+if(n==0):
+    print('the number enterd is zero')
+    print('the factorial is 0')
+if(n>0):
+    fact=1
+    print('the numbre is positive')
+    for i in range(1, n+1):
+        fact=fact*i
+    print(fact)
+
+#prime numbers in range
+n1=int(input('enter lower bound'))
+n2=int(input('enter upper bound'))
+
+for i in range(n1, n2+1):
+    flag=1
+    for j in range(2,i):
+        if(i%j)==0:
+            flag=0
+            break
+    if flag==1:
+        print(i)
+
+#genrate a ramdom number between n1 and n2 number is always positive,print the sum of all natural numbers till that numbers(use while loop)
+import random
+n1=int(input('n1'))
+n2=int(input('n2'))
+n=int(random.randint(n1,n2))
+print("the random number is ",n)
+if(n<=0):
+    print('error : the number is negative')
+else:
+    i=1
+    sum=0
+    while(i<=n):
+        sum=sum+i
+        i=i+1
+    print("the sum of natural number till ",n,"is",sum)
+
+#read a list of integers ,print that list then print a random element element from that list
+import random
+a=[2,4,2,4,1,3,4,5]
+n=random.choice(a)
+print(n)
+
+#read a two dimensnal array and print it on the screen 
+#read an alphabet print its ascii value 
+#create a list with 3 elements remove two elements from that and append two new elements print the list after every operation
+#print all the armstrong number 1 and n
+#function genration
